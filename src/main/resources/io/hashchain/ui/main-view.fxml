@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="io.hashchain.ui.MainController">
+
+    <top>
+        <VBox spacing="5">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+            <HBox spacing="5">
+                <Label text="Фамилия"/>
+                <TextField fx:id="lastNameField" />
+                <Label text="Имя"/>
+                <TextField fx:id="firstNameField" />
+                <Label text="Отчество"/>
+                <TextField fx:id="patronymicField" />
+                <Label text="Дата рождения"/>
+                <DatePicker fx:id="birthDatePicker" />
+            </HBox>
+            <HBox spacing="5">
+                <Label text="X"/>
+                <TextField fx:id="xField" prefWidth="60"/>
+                <Label text="Y"/>
+                <TextField fx:id="yField" prefWidth="60"/>
+                <Label text="Качество"/>
+                <TextField fx:id="qualityField" prefWidth="60"/>
+                <Label text="Тип"/>
+                <ComboBox fx:id="typeCombo" prefWidth="120"/>
+                <Button text="Добавить запись" onAction="#onAddRecord"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="chainTable">
+            <columns>
+                <TableColumn fx:id="hashColumn" text="Хеш" prefWidth="250"/>
+                <TableColumn fx:id="fioColumn" text="ФИО" prefWidth="200"/>
+                <TableColumn fx:id="birthDateColumn" text="Дата рождения" prefWidth="120"/>
+                <TableColumn fx:id="fingerprintTypeColumn" text="Тип точки" prefWidth="120"/>
+                <TableColumn fx:id="qualityColumn" text="Качество" prefWidth="80"/>
+                <TableColumn fx:id="prevHashColumn" text="Предыдущий хеш" prefWidth="250"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="5">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10" />
+            </padding>
+            <Button text="Удалить выбранную запись" onAction="#onDeleteSelected" />
+        </HBox>
+    </bottom>
+
+</BorderPane>

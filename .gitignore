@@ -1,0 +1,73 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Build outputs ###
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### Logs ###
+*.log
+hs_err_pid*
+replay_pid*
+
+### Environment files ###
+.env
+.env.local
+.env.*.local
+
+### Backup files ###
+*.bak
+*.tmp
+*.swp
+*~
+*.backup
+hashchain_backup.json
+
+hashchain.json
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### OS specific files ###
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+### Maven ###
+.mvn/timing.properties
+.mvn/profiles.xml
+dependency-reduced-pom.xml
+buildNumber.properties
